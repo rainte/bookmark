@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rainte</title>
+    <style type="text/css">
+      html {
+        height: 100%;
+
+        body {
+          margin: 0;
+          padding: 0;
+          height: inherit;
+          display: flex;
+          flex-direction: column;
+
+          > header {
+            display: flex;
+            align-items: center;
+            height: 10vh;
+            padding: 1vh 2vh;
+            font-size: 5vh;
+            color: #fff;
+            background-color: #336699;
+
+            > img {
+              width: 8vh;
+              height: 8vh;
+              filter: brightness(0) invert(1);
+            }
+
+            > span:nth-child(2) {
+              flex-grow: 1;
+              font-weight: bold;
+              text-align: center;
+            }
+
+            > span:last-child {
+              width: 8vh;
+              height: 8vh;
+            }
+          }
+
+          > section {
+            flex-grow: 1;
+            margin: 2vh;
+            padding: 1.5vh;
+            border: 0.3vh solid #d1d1d1;
+          }
+
+          > footer {
+            font-size: 2vh;
+            text-align: center;
+            > ul {
+              margin: 1.5vh;
+              padding: 0;
+
+              li {
+                display: inline-block;
+              }
+            }
+          }
+        }
+      }
+
+      .mark-box {
+        display: flex;
+        margin-bottom: 2vh;
+      }
+
+      .mark-box--end {
+        margin-left: 3vh;
+      }
+
+      .mark-node {
+        width: 5vh;
+        text-align: center;
+        font-weight: bold;
+        color: #006699;
+      }
+
+      .mark-node--end {
+        margin-right: 1vh;
+        display: inline-block;
+        font-weight: normal;
+        color: blue;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://hub.gitmirror.com/https://raw.githubusercontent.com/rainte/cdn/main/image/Rainte.png"
+      />
+      <span>Rainte</span>
+      <span></span>
+    </header>
+    <section>
+      <article></article>
+    </section>
+    <footer>
+      <ul>
+        <li>
+          <a href="https://beian.miit.gov.cn/" target="_blank">
+            沪ICP备18016401号-3
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
+<script type="text/javascript">
+  fetch(
+    'https://hub.gitmirror.com/https://gist.githubusercontent.com/sxfmao/59fd7b7e279b6960bd8e4a113286f801/raw/2cd0bd072f5f948588b86a4b8aaeabccfbc55c17/Bookmark',
+  )
+    .then(response => response.json())
+    .then(res => {
+      tree(
+        res.bookmarks[0].children.reverse(),
+        document.getElementsByTagName('article')[0],
+      )
+    })
+
+  const tree = (data, ele) => {
+    data.forEach(item => {
+      if (item.title == '嘿呦') {
+        return
+      }
+
+      let box
+      if (item.children) {
+        console.log(ele)
+        box = document.createElement('div')
+        box.classList.add('mark-box')
+
+        const node = document.createElement('div')
+        node.classList.add('mark-node')
+        node.textContent = item.title
+        box.appendChild(node)
+      } else {
+        box = document.createElement('a')
+        box.classList.add('mark-node--end')
+        box.textContent = item.title
+        box.setAttribute('href', item.url)
+        box.setAttribute('target', '_blank')
+
+        ele.classList.add('mark-box--end')
+      }
+
+      if (item.children) {
+        const childrenDiv = document.createElement('div')
+        tree(item.children, childrenDiv)
+
+        box.appendChild(childrenDiv)
+      }
+
+      ele.appendChild(box)
+    })
+  }
+</script>

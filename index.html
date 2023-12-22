@@ -5,101 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rainte</title>
     <style type="text/css">
-      html {
+      html,
+      body {
+        margin: 0;
+        padding: 0;
         height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
 
-        body {
-          margin: 0;
-          padding: 0;
-          height: inherit;
-          display: flex;
-          flex-direction: column;
+      a {
+        text-decoration: none;
+      }
 
-          > header {
-            display: flex;
-            align-items: center;
-            height: 10vh;
-            padding: 1vh 2vh;
-            font-size: 5vh;
-            color: #fff;
-            background-color: #336699;
+      header {
+        display: flex;
+        align-items: center;
+        padding: 0 2vh;
+        color: #fff;
+        background-color: #336699;
+      }
 
-            > img {
-              width: 8vh;
-              height: 8vh;
-              filter: brightness(0) invert(1);
-            }
+      header span:first-child,
+      header span:last-child {
+        width: 6vh;
+        height: 6vh;
+      }
 
-            > span:nth-child(2) {
-              flex-grow: 1;
-              font-weight: bold;
-              text-align: center;
-            }
+      header span:first-child img {
+        width: 100%;
+        height: 100%;
+        filter: brightness(0) invert(1);
+      }
 
-            > span:last-child {
-              width: 8vh;
-              height: 8vh;
-            }
-          }
+      header span:nth-child(2) {
+        flex-grow: 1;
+        font-size: 3.5vh;
+        line-height: 8vh;
+        font-weight: bold;
+        text-align: center;
+      }
 
-          > section {
-            flex-grow: 1;
-            margin: 2vh;
-            padding: 1.5vh;
-            border: 0.3vh solid #d1d1d1;
-          }
+      section {
+        flex-grow: 1;
+        margin: 2vh;
+        padding: 2vh;
+        border: 0.3vh solid #d1d1d1;
+      }
 
-          > footer {
-            font-size: 2vh;
-            text-align: center;
-            > ul {
-              margin: 1.5vh;
-              padding: 0;
+      footer ul {
+        padding: 0;
+        font-size: 1.5vh;
+        text-align: center;
+      }
 
-              li {
-                display: inline-block;
-              }
-            }
-          }
-        }
+      footer li {
+        display: inline-block;
+        margin: 0 0.5vh;
+      }
+
+      footer a {
+        color: #bbb;
       }
 
       .mark-box {
         display: flex;
-        margin-bottom: 2vh;
       }
 
       .mark-box--end {
         margin-left: 3vh;
+        margin-bottom: 2vh;
       }
 
       .mark-node {
         width: 5vh;
-        text-align: center;
+        color: #336699;
         font-weight: bold;
-        color: #006699;
       }
 
       .mark-node--end {
-        margin-right: 1vh;
         display: inline-block;
-        font-weight: normal;
+        margin-right: 1vh;
         color: blue;
-        text-decoration: none;
       }
     </style>
   </head>
   <body>
     <header>
-      <img
-        src="https://hub.gitmirror.com/https://raw.githubusercontent.com/rainte/cdn/main/image/Rainte.png"
-      />
+      <span>
+        <a href="/">
+          <img
+            src="https://hub.gitmirror.com/https://raw.githubusercontent.com/rainte/cdn/main/image/Rainte.png"
+          />
+        </a>
+      </span>
       <span>Rainte</span>
       <span></span>
     </header>
-    <section>
-      <article></article>
-    </section>
+    <section></section>
     <footer>
       <ul>
         <li>
@@ -119,7 +122,7 @@
     .then(res => {
       tree(
         res.bookmarks[0].children.reverse(),
-        document.getElementsByTagName('article')[0],
+        document.getElementsByTagName('section')[0],
       )
     })
 
@@ -131,7 +134,6 @@
 
       let box
       if (item.children) {
-        console.log(ele)
         box = document.createElement('div')
         box.classList.add('mark-box')
 

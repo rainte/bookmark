@@ -50,6 +50,7 @@
         flex-grow: 1;
         margin: 2vh;
         padding: 2vh;
+        font-size: 2vh;
         border: 0.3vh solid #d1d1d1;
       }
 
@@ -85,10 +86,36 @@
 
       .mark-node--end {
         display: inline-block;
-        margin-right: 1vh;
+        padding: 0 1vh;
         color: blue;
+        position: relative;
+      }
+
+      .mark-node--end::after {
+        content: '';
+        position: absolute;
+        top: 1vh;
+        left: 0;
+        width: 0.01vh;
+        height: 1vh;
+        background-color: #bbb;
+      }
+
+      .mark-node--end:first-child::after {
+        width: 0;
+        height: 0;
       }
     </style>
+
+    <script>
+      var _hmt = _hmt || []
+      ;(function () {
+        var hm = document.createElement('script')
+        hm.src = 'https://hm.baidu.com/hm.js?9d3ff7bd29ea9faa47f39846ebe6c89b'
+        var s = document.getElementsByTagName('script')[0]
+        s.parentNode.insertBefore(hm, s)
+      })()
+    </script>
   </head>
   <body>
     <header>

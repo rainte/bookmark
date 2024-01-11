@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rainte</title>
-    <link
-      rel="stylesheet"
-      href="https://necolas.github.io/normalize.css/latest/normalize.css"
-    />
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css" />
     <style type="text/css">
       img {
         width: 100%;
@@ -139,9 +136,7 @@
     <footer>
       <ul>
         <li>
-          <a href="https://beian.miit.gov.cn/" target="_blank">
-            沪ICP备18016401号-3
-          </a>
+          <a href="https://beian.miit.gov.cn/" target="_blank"> 沪ICP备18016401号-3 </a>
         </li>
       </ul>
     </footer>
@@ -149,15 +144,15 @@
 </html>
 <script type="text/javascript">
   fetch('https://api.github.com/gists/e61a0596e71857e980ab0e0d78c8fadc')
-    .then(res => res.json())
-    .then(res => JSON.parse(res.files.bookmark.content))
-    .then(res => res.bookmarks[0].children.reverse())
-    .then(res => {
+    .then((res) => res.json())
+    .then((res) => JSON.parse(res.files.bookmark.content))
+    .then((res) => res.bookmarks[0].children.reverse())
+    .then((res) => {
       tree(res, document.getElementsByTagName('section')[0])
     })
 
   const tree = (data, ele) => {
-    data.forEach(item => {
+    data.forEach((item) => {
       if (item.title == '嘿呦') {
         return
       }

@@ -124,9 +124,7 @@
     <header>
       <span>
         <a href="/">
-          <img
-            src="https://hub.gitmirror.com/https://raw.githubusercontent.com/rainte/cdn/main/image/Rainte.png"
-          />
+          <img src="https://raw.githubusercontent.com/rainte/cdn/main/image/Rainte.png" />
         </a>
       </span>
       <span>Rainte</span>
@@ -146,10 +144,8 @@
   fetch('https://api.github.com/gists/c98539edb1fb4685b7ec8338358480ea')
     .then((res) => res.json())
     .then((res) => JSON.parse(res.files['bookmark.json'].content))
-    .then((res) => res.bookmarks[0].children.reverse())
-    .then((res) => {
-      tree(res, document.getElementsByTagName('section')[0])
-    })
+    .then((res) => res.tree[0].children.reverse())
+    .then((res) => tree(res, document.getElementsByTagName('section')[0]))
 
   const tree = (data, ele) => {
     data.forEach((item) => {

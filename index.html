@@ -6,72 +6,46 @@
     <title>Rainte</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css" />
     <style type="text/css">
-      img {
-        width: 100%;
-        height: 100%;
+      @font-face {
+        font-family: 'Architects Daughter';
+        src: url('Architects Daughter.woff') format('woff');
       }
 
       a {
-        text-decoration: none;
+        color: #666;
       }
-
+    </style>
+    <style type="text/css">
       html,
       body {
         height: 100%;
         display: flex;
-        line-height: 1;
         flex-direction: column;
-        background: linen;
+        background: #fafafa;
+        font-family: 'Architects Daughter';
       }
 
       header {
-        padding: 0.3rem 1rem;
-        display: flex;
-        align-items: center;
+        font-size: 5rem;
+        padding: 3rem 15rem;
         color: #fff;
-        background-color: #336699;
-      }
-
-      header span:first-child,
-      header span:last-child,
-      header span:first-child a {
-        display: block;
-        width: 3rem;
-        height: 3rem;
-      }
-
-      header span:first-child img {
-        filter: brightness(0) invert(1);
-      }
-
-      header span:nth-child(2) {
-        flex-grow: 1;
-        font-size: 2rem;
-        line-height: 3rem;
-        font-weight: bold;
-        text-align: center;
+        background-color: #2188b6;
       }
 
       section {
         flex-grow: 1;
-        margin: 1rem;
-        padding: 1rem;
         font-size: 1rem;
+        margin: 2rem 15rem;
       }
 
       footer ul {
-        margin: 0 1rem 1rem;
-        padding: 0;
         font-size: 0.8rem;
         text-align: center;
+        padding: 0;
       }
 
       footer li {
         display: inline-block;
-      }
-
-      footer a {
-        color: #bbb;
       }
 
       .mark-box {
@@ -79,36 +53,22 @@
       }
 
       .mark-box--end {
-        margin: 0 0 1rem 1rem;
+        margin: 0 0 0.5rem 1rem;
       }
 
       .mark-node {
-        flex: none;
         width: 2.5rem;
-        color: #336699;
+        color: #2188b6;
         font-weight: bold;
       }
 
       .mark-node--end {
-        display: inline-block;
-        padding: 0 0.5rem 0.3rem;
-        color: blue;
-        position: relative;
+        padding: 0 0.5rem 0;
       }
 
       .mark-node--end::after {
         content: '';
         position: absolute;
-        top: 0.3rem;
-        left: 0;
-        width: 0.01rem;
-        height: 0.5rem;
-        background-color: #bbb;
-      }
-
-      .mark-node--end:first-child::after {
-        width: 0;
-        height: 0;
       }
     </style>
     <script>
@@ -123,13 +83,7 @@
   </head>
   <body>
     <header>
-      <span>
-        <a href="/">
-          <img src="https://raw.githubusercontent.com/rainte/cdn/main/image/Rainte.png" />
-        </a>
-      </span>
       <span>Rainte</span>
-      <span></span>
     </header>
     <section></section>
     <footer>

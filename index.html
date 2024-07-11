@@ -97,7 +97,12 @@
   </body>
 </html>
 <script type="text/javascript">
-  fetch('https://api.github.com/gists/c98539edb1fb4685b7ec8338358480ea')
+  fetch('https://api.github.com/gists/c98539edb1fb4685b7ec8338358480ea', {
+    headers: new Headers({
+      Accept: 'application/vnd.github+json',
+      Authorization: 'Bearer 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'
+    })
+  })
     .then((res) => res.json())
     .then((res) => JSON.parse(res.files['bookmark.json'].content))
     .then((res) => res.tree[0].children.reverse())

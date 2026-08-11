@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rainte</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css" />
+    <style type="text/css">
+      @font-face {
+        font-family: 'Architects Daughter';
+        src: url('Architects Daughter.woff') format('woff');
+      }
+    </style>
+    <style type="text/css">
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: #fafafa;
+        font-family: 'Architects Daughter';
+      }
+
+      header {
+        padding: 2vw 15vw;
+        color: #fff;
+        background-color: #2188b6;
+
+        a {
+          color: inherit;
+          font-size: 5rem;
+          text-decoration: none;
+        }
+      }
+
+      section {
+        flex-grow: 1;
+        font-size: 1rem;
+        margin: 1rem 15vw;
+        white-space: nowrap;
+
+        .mark-box {
+          display: flex;
+          flex-direction: row;
+        }
+
+        .mark-row {
+          margin-bottom: 0.5rem;
+        }
+
+        .mark-node {
+          color: #2188b6;
+          font-weight: bold;
+        }
+
+        .mark-text {
+          color: #666;
+          margin: 0 0.5rem;
+        }
+
+        .mark-row > .mark-items {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+
+        .mark-items > .mark-box {
+          margin-left: 0.5rem;
+        }
+      }
+
+      footer {
+        ul {
+          font-size: 0.8rem;
+          text-align: center;
+          padding: 0;
+
+          li {
+            display: inline-block;
+
+            a {
+              color: #bbb;
+              font-size: 0.7rem;
+              font-family: Arial, sans-serif;
+            }
+          }
+        }
+      }
+    </style>
+    <script>
+      var _hmt = _hmt || []
+      ;(function () {
+        var hm = document.createElement('script')
+        hm.src = 'https://hm.baidu.com/hm.js?9d3ff7bd29ea9faa47f39846ebe6c89b'
+        var s = document.getElementsByTagName('script')[0]
+        s.parentNode.insertBefore(hm, s)
+      })()
+    </script>
+  </head>
+  <body>
+    <header>
+      <a href="/">Rainte</a>
+    </header>
+    <section></section>
+    <footer>
+      <ul>
+        <li>
+          <a href="https://beian.miit.gov.cn/" target="_blank"> 沪ICP备18016401号 </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
+<script type="text/javascript">
+  const tree = (data, ele) => {
+    data.forEach((item) => {
+      if (item.title == '嘿呦') {
+        return
+      }
+
+      let box
+      if (item.children) {
+        box = document.createElement('div')
+        box.classList.add('mark-box')
+
+        const node = document.createElement('div')
+        node.classList.add('mark-node')
+        node.textContent = item.title
+        box.appendChild(node)
+
+        const text = document.createElement('div')
+        text.classList.add('mark-items')
+        box.appendChild(text)
+
+        tree(item.children, text)
+      } else {
+        ele.parentElement.classList.add('mark-row')
+
+        box = document.createElement('a')
+        box.classList.add('mark-text')
+        box.textContent = item.title
+        box.setAttribute('href', item.url)
+        box.setAttribute('target', '_blank')
+      }
+
+      ele.appendChild(box)
+    })
+  }
+</script>
+
+<script type="text/javascript">
+  const filterSensitive = (data, value) => {
+    if (Array.isArray(data)) {
+      return data
+        .map((item) => filterSensitive(item, value))
+        .filter((item) => {
+          if (item && typeof item === 'object') {
+            return item.title !== value
+          }
+          return true
+        })
+    }
+    if (data && typeof data === 'object') {
+      const result = { ...data }
+      if (result.children) {
+        result.children = filterSensitive(result.children, value)
+      }
+      return result
+    }
+    return tree
+  }
+
+  fetch('bookmark.json')
+    .then((res) => res.json())
+    .then((res) => filterSensitive(res, '嘿呦'))
+    .then((res) => tree(res, document.getElementsByTagName('section')[0]))
+</script>
+
+<!-- <script src="./mock.js"></script>
+<script type="text/javascript">
+  tree(res, document.getElementsByTagName('section')[0])
+</script> -->

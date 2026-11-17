@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rainte</title>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <style>
+      /* ============ 设计变量 ============ */
+      :root {
+        --color-primary: #2188b6;
+        --color-text: #666;
+        --color-text-light: #999;
+        --color-bg: #fafafa;
+        --color-white: #fff;
+        --color-footer: #bbb;
+
+        --font-hand: 'Comic Sans MS', sans-serif;
+        --font-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+
+        --space-page-x: 15vw;
+        --space-page-y: 1rem;
+      }
+
+      /* ============ 基础重置 ============ */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: var(--color-bg);
+        font-family: var(--font-system);
+        color: var(--color-text);
+        line-height: 1.5;
+      }
+
+      a {
+        transition: color 0.15s ease;
+      }
+
+      /* ============ 头部 ============ */
+      .site-header {
+        padding: 2vw var(--space-page-x);
+        color: var(--color-white);
+        background-color: var(--color-primary);
+      }
+
+      .site-header__logo {
+        display: inline-block;
+        color: inherit;
+        font-family: var(--font-hand);
+        font-size: clamp(2rem, 5vw, 5rem);
+        text-decoration: none;
+        line-height: 1.1;
+      }
+
+      .site-header__logo:hover {
+        color: var(--color-text);
+      }
+
+      /* ============ 主体 ============ */
+      .site-main {
+        flex: 1 0 auto;
+        margin: var(--space-page-y) var(--space-page-x);
+      }
+
+      /* ============ 书签树 ============ */
+      .mark-box {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+      }
+
+      .mark-node {
+        flex-shrink: 0;
+        color: var(--color-primary);
+        font-weight: bold;
+        margin-right: 0.5rem;
+      }
+
+      .mark-items {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 0.25rem 0.75rem;
+        flex: 1 1 auto;
+      }
+
+      .mark-text {
+        color: var(--color-text);
+        font-family: var(--font-hand);
+        word-break: break-word;
+      }
+
+      .mark-text:hover,
+      .mark-text:focus-visible {
+        color: var(--color-primary);
+      }
+
+      .mark-items > .mark-box {
+        width: 100%;
+      }
+
+      /* 骨架屏 */
+      .skeleton {
+        display: block;
+        height: 1rem;
+        margin: 0.75rem 0;
+        border-radius: 4px;
+        background: linear-gradient(90deg, #eee 25%, #f5f5f5 50%, #eee 75%);
+        background-size: 200% 100%;
+        animation: skeleton-shimmer 1.4s ease-in-out infinite;
+      }
+
+      .skeleton--short {
+        width: 30%;
+      }
+      .skeleton--medium {
+        width: 55%;
+      }
+      .skeleton--long {
+        width: 80%;
+      }
+
+      @keyframes skeleton-shimmer {
+        0% {
+          background-position: 200% 0;
+        }
+        100% {
+          background-position: -200% 0;
+        }
+      }
+
+      /* ============ 页脚 ============ */
+      .site-footer {
+        flex-shrink: 0;
+        padding: 1rem 0;
+      }
+
+      .site-footer__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 0.8rem;
+        text-align: center;
+      }
+
+      .site-footer__item {
+        display: inline-block;
+      }
+
+      .site-footer__link {
+        color: var(--color-footer);
+        font-size: 0.7rem;
+        font-family: var(--font-system);
+        text-decoration: none;
+      }
+
+      .site-footer__link:hover {
+        color: var(--color-text-light);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <a class="site-header__logo" href="/">Rainte</a>
+    </header>
+
+    <main class="site-main" id="app">
+      <div class="skeleton skeleton--short"></div>
+      <div class="skeleton skeleton--medium"></div>
+      <div class="skeleton skeleton--long"></div>
+      <div class="skeleton skeleton--medium"></div>
+      <div class="skeleton skeleton--short"></div>
+    </main>
+
+    <footer class="site-footer">
+      <ul class="site-footer__list">
+        <li class="site-footer__item">
+          <a
+            class="site-footer__link"
+            href="https://beian.miit.gov.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            沪ICP备18016401号
+          </a>
+        </li>
+      </ul>
+    </footer>
+
+    <script type="module" src="./assets/main.js"></script>
+  </body>
+</html>

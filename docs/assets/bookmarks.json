@@ -1,0 +1,539 @@
+[
+  {
+    "title": "书签栏",
+    "folderType": "bookmarks-bar",
+    "children": [
+      {
+        "title": "书签",
+        "children": [
+          {
+            "title": "娱乐",
+            "children": [
+              {
+                "title": "OP.GG",
+                "url": "https://op.gg/zh-cn"
+              },
+              {
+                "title": "华视影院",
+                "url": "https://huavod.com/label/rank.html"
+              },
+              {
+                "title": "Z-Library",
+                "url": "https://zh.z-lib.sk/"
+              },
+              {
+                "title": "虎扑社区",
+                "url": "https://bbs.hupu.com/"
+              },
+              {
+                "title": "常用工具",
+                "url": "https://tool.liumingye.cn/"
+              }
+            ]
+          },
+          {
+            "title": "本地",
+            "children": [
+              {
+                "title": "Nacos",
+                "url": "http://mine.com:8848/nacos"
+              },
+              {
+                "title": "XxlJob",
+                "url": "http://mine.com:18080/xxl-job-admin"
+              },
+              {
+                "title": "Sentinel",
+                "url": "http://mine.com:8858/"
+              },
+              {
+                "title": "Seata",
+                "url": "http://mine.com:7091/"
+              },
+              {
+                "title": "RabbitMQ",
+                "url": "http://mine.com:15672/"
+              },
+              {
+                "title": "RocketMQ",
+                "url": "http://mine.com:19876/"
+              },
+              {
+                "title": "Flink",
+                "url": "http://mine.com:8081/"
+              },
+              {
+                "title": "Cerebro",
+                "url": "http://mine.com:9000/"
+              },
+              {
+                "title": "Elasticsearch",
+                "url": "http://mine.com:9200/"
+              },
+              {
+                "title": "KubeSphere",
+                "url": "http://mine.com:30880/"
+              }
+            ]
+          },
+          {
+            "title": "前端",
+            "children": [
+              {
+                "title": "设计",
+                "children": [
+                  {
+                    "title": "堆糖",
+                    "url": "https://www.duitang.com/"
+                  },
+                  {
+                    "title": "涂鸦王国",
+                    "url": "https://www.gracg.com/"
+                  },
+                  {
+                    "title": "Unsplash",
+                    "url": "https://unsplash.com/"
+                  },
+                  {
+                    "title": "Pinterest",
+                    "url": "https://www.pinterest.com/"
+                  },
+                  {
+                    "title": "视觉中国",
+                    "url": "https://www.vcg.com/"
+                  }
+                ]
+              },
+              {
+                "title": "框架",
+                "children": [
+                  {
+                    "title": "WXT",
+                    "url": "https://wxt.dev/"
+                  },
+                  {
+                    "title": "Antd",
+                    "url": "https://ant-design.antgroup.com/"
+                  },
+                  {
+                    "title": "Vue",
+                    "url": "https://cn.vuejs.org/"
+                  },
+                  {
+                    "title": "Vite",
+                    "url": "https://cn.vitejs.dev/"
+                  },
+                  {
+                    "title": "React",
+                    "url": "https://reactjs.org/"
+                  },
+                  {
+                    "title": "Next.js",
+                    "url": "https://nextjs.org/"
+                  },
+                  {
+                    "title": "Flutter",
+                    "url": "https://flutter.cn/"
+                  }
+                ]
+              },
+              {
+                "title": "应用",
+                "children": [
+                  {
+                    "title": "谷歌插件",
+                    "url": "https://developer.chrome.com/docs/extensions"
+                  },
+                  {
+                    "title": "BEM",
+                    "url": "https://bemcss.com/"
+                  },
+                  {
+                    "title": "Less",
+                    "url": "https://lesscss.org/"
+                  },
+                  {
+                    "title": "Sass",
+                    "url": "https://www.sass.hk/"
+                  },
+                  {
+                    "title": "Gulp",
+                    "url": "https://www.gulpjs.com.cn/"
+                  },
+                  {
+                    "title": "Npm",
+                    "url": "https://www.npmjs.com/"
+                  },
+                  {
+                    "title": "Iconfont",
+                    "url": "https://www.iconfont.cn/"
+                  },
+                  {
+                    "title": "React Icons",
+                    "url": "https://react-icons.github.io/react-icons/"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "后端",
+            "children": [
+              {
+                "title": "PHP",
+                "children": [
+                  {
+                    "title": "微擎",
+                    "url": "https://www.w7.cc/"
+                  },
+                  {
+                    "title": "Laravel",
+                    "url": "https://learnku.com/docs/laravel/"
+                  },
+                  {
+                    "title": "Hyperf",
+                    "url": "https://www.hyperf.io/"
+                  },
+                  {
+                    "title": "Swoole",
+                    "url": "https://www.swoole.com/"
+                  },
+                  {
+                    "title": "Composer",
+                    "url": "https://www.phpcomposer.com/"
+                  },
+                  {
+                    "title": "Packagist",
+                    "url": "https://packagist.org/"
+                  }
+                ]
+              },
+              {
+                "title": "Java",
+                "children": [
+                  {
+                    "title": "IDE激活",
+                    "url": "https://blog.idejihuo.com/"
+                  },
+                  {
+                    "title": "若依",
+                    "url": "http://doc.ruoyi.vip/"
+                  },
+                  {
+                    "title": "MyBatis",
+                    "url": "https://baomidou.com/"
+                  },
+                  {
+                    "title": "Arthas",
+                    "url": "https://arthas.aliyun.com/"
+                  },
+                  {
+                    "title": "Maven",
+                    "url": "https://central.sonatype.com/"
+                  },
+                  {
+                    "title": "Gradle",
+                    "url": "https://plugins.gradle.org/"
+                  }
+                ]
+              },
+              {
+                "title": "Python",
+                "children": [
+                  {
+                    "title": "Python",
+                    "url": "https://www.python.org/"
+                  }
+                ]
+              },
+              {
+                "title": "应用",
+                "children": [
+                  {
+                    "title": "第一信息",
+                    "url": "http://web.1xinxi.cn/"
+                  },
+                  {
+                    "title": "互亿无线",
+                    "url": "https://www.ihuyi.com/"
+                  },
+                  {
+                    "title": "极验",
+                    "url": "https://www.geetest.com/"
+                  },
+                  {
+                    "title": "极光",
+                    "url": "https://www.jiguang.cn/"
+                  },
+                  {
+                    "title": "聚合数据",
+                    "url": "https://www.juhe.cn/"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "运维",
+            "children": [
+              {
+                "title": "服务",
+                "children": [
+                  {
+                    "title": "MSDN",
+                    "url": "https://msdn.itellyou.cn/"
+                  },
+                  {
+                    "title": "Scoop",
+                    "url": "https://scoop.sh/"
+                  },
+                  {
+                    "title": "Helm",
+                    "url": "https://artifacthub.io/"
+                  },
+                  {
+                    "title": "Docker",
+                    "url": "https://hub.docker.com/"
+                  },
+                  {
+                    "title": "Windows",
+                    "url": "https://www.microsoft.com/zh-cn/software-download/"
+                  }
+                ]
+              },
+              {
+                "title": "应用",
+                "children": [
+                  {
+                    "title": "Mail",
+                    "url": "https://temp-mail.org/"
+                  },
+                  {
+                    "title": "Drawio",
+                    "url": "https://app.diagrams.net/"
+                  },
+                  {
+                    "title": "ProcessOn",
+                    "url": "https://www.processon.com/"
+                  },
+                  {
+                    "title": "Nslookup",
+                    "url": "https://www.nslookup.io/"
+                  },
+                  {
+                    "title": "GitBook",
+                    "url": "https://www.gitbook.com/"
+                  },
+                  {
+                    "title": "奶牛快传",
+                    "url": "https://cowtransfer.com/"
+                  },
+                  {
+                    "title": "阿里云盘",
+                    "url": "https://www.aliyundrive.com/drive/home"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "资料",
+            "children": [
+              {
+                "title": "网站",
+                "children": [
+                  {
+                    "title": "AvaTrade",
+                    "url": "https://www.avatrade-pro.asia/"
+                  },
+                  {
+                    "title": "福汇FXCM",
+                    "url": "https://www.fxcmofficial.com/"
+                  },
+                  {
+                    "title": "万洲金业",
+                    "url": "https://www.wzg.com/"
+                  },
+                  {
+                    "title": "金荣中国",
+                    "url": "https://www.jrjr.com/"
+                  }
+                ]
+              },
+              {
+                "title": "政府",
+                "children": [
+                  {
+                    "title": "平度政务",
+                    "url": "http://www.pingdu.gov.cn/"
+                  },
+                  {
+                    "title": "上海政府",
+                    "url": "https://www.shanghai.gov.cn/"
+                  },
+                  {
+                    "title": "上海市民",
+                    "url": "https://www.962222.net/"
+                  },
+                  {
+                    "title": "上海住房",
+                    "url": "https://www.shzfgjj.cn/"
+                  },
+                  {
+                    "title": "中国企业",
+                    "url": "https://www.gsxt.gov.cn/"
+                  },
+                  {
+                    "title": "中国交管",
+                    "url": "https://gab.122.gov.cn/"
+                  },
+                  {
+                    "title": "中国征信",
+                    "url": "https://ipcrs.pbccrc.org.cn/"
+                  }
+                ]
+              },
+              {
+                "title": "嘿呦",
+                "children": [
+                  {
+                    "title": "91",
+                    "url": "https://91p676.com/"
+                  },
+                  {
+                    "title": "种子搜",
+                    "url": "https://zhongziso.com/"
+                  },
+                  {
+                    "title": "KanAV",
+                    "url": "https://v1.kanav.cfd/"
+                  },
+                  {
+                    "title": "91porna",
+                    "url": "https://91porna.com/"
+                  },
+                  {
+                    "title": "Live",
+                    "children": [
+                      {
+                        "title": "Wildhardcore",
+                        "url": "https://zh.wildhardcore.com/"
+                      },
+                      {
+                        "title": "Cambaddies",
+                        "url": "https://zh.cambaddies.com/"
+                      },
+                      {
+                        "title": "Stripchat",
+                        "url": "https://zh.stripchat.com/"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Porn",
+                    "children": [
+                      {
+                        "title": "PornPics",
+                        "url": "https://www.pornpics.com/zh/"
+                      },
+                      {
+                        "title": "国产区",
+                        "url": "https://95da.com/"
+                      },
+                      {
+                        "title": "KanAV",
+                        "url": "https://kanav.ad/"
+                      },
+                      {
+                        "title": "黄桃短剧",
+                        "url": "https://huangdoudj.github.io/"
+                      },
+                      {
+                        "title": "黄果剧场",
+                        "url": "https://huangguo.video/"
+                      },
+                      {
+                        "title": "海角社区",
+                        "url": "https://haijiao.com/"
+                      },
+                      {
+                        "title": "FreePorn",
+                        "url": "https://www.fpo.xxx/"
+                      },
+                      {
+                        "title": "xHamster",
+                        "url": "https://tw.xhamster.com/"
+                      },
+                      {
+                        "title": "ThePornlinks",
+                        "url": "https://nl.thepornlinks.com/"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "助手",
+        "children": [
+          {
+            "title": "DeepSeek",
+            "url": "https://chat.deepseek.com/"
+          },
+          {
+            "title": "豆包助手",
+            "url": "https://www.doubao.com/"
+          },
+          {
+            "title": "ChatGPT",
+            "url": "https://chatgpt.com/"
+          },
+          {
+            "title": "Grok",
+            "url": "https://grok.com/"
+          },
+          {
+            "title": "Poe",
+            "url": "https://poe.com/"
+          }
+        ]
+      },
+      {
+        "title": "常用",
+        "children": [
+          {
+            "title": "抖音视频",
+            "url": "https://www.douyin.com/?recommend=1"
+          },
+          {
+            "title": "雪球基金",
+            "url": "https://xueqiu.com/"
+          },
+          {
+            "title": "虎牙订阅",
+            "url": "https://www.huya.com/myfollow"
+          },
+          {
+            "title": "网易邮箱",
+            "url": "https://mail.163.com/"
+          },
+          {
+            "title": "Google",
+            "url": "https://www.google.com/"
+          },
+          {
+            "title": "GitHub",
+            "url": "https://github.com/orgs/rainte/repositories"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "其他书签",
+    "folderType": "other"
+  }
+]
